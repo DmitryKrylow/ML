@@ -8,7 +8,7 @@ import numpy as np
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 
 # Классы: ['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
-selected_classes = [2, 3, 5, 6]  # bird, cat, dog, frog (frog = человек временно)
+selected_classes = [2, 3, 5, 6]  # bird, cat, dog, frog
 
 y_train = y_train.flatten()
 y_test = y_test.flatten()
@@ -60,4 +60,5 @@ history = model.fit(
 )
 
 # Сохраняем модель
+
 model.save('cifar10_subset_cnn.h5')
