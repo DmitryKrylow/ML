@@ -12,7 +12,7 @@ import seaborn as sns
 # -----------------------------
 # 1. Загрузка и объединение CSV
 # -----------------------------
-data_folder = "C:\\Users\\dima2\\PycharmProjects\\lab4ML"  # <-- замените на путь к вашим CSV
+data_folder = "C:\\Users\\dima2\\PycharmProjects\\lab4ML" 
 all_files = [f for f in os.listdir(data_folder) if f.endswith('.csv')]
 
 df_list = []
@@ -107,4 +107,5 @@ sns.heatmap(pivot_table, annot=True, fmt=".3f", cmap="viridis")
 plt.title("Validation Accuracy for different alpha and learning_rate")
 plt.ylabel("Alpha (regularization)")
 plt.xlabel("Learning Rate")
+
 plt.show()
