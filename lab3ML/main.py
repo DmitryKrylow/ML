@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 
 from sklearn.linear_model import Ridge, Lasso
 
-# Загружаем данные (замени путь на свой)
+# Загружаем данные
 data = pd.read_csv("CASP.csv")
 
-# Предположим, что последний столбец — целевая переменная
+# Целевая переменнная - последний столбец
 X = data.iloc[:, :-1].values
 y = data.iloc[:, -1].values
 
@@ -88,4 +88,5 @@ plt.semilogx(alphas, ridge_test_scores, label="Test R^2")
 plt.xlabel("Коэффициент регуляризации (alpha)")
 plt.ylabel("Точность (R^2)")
 plt.legend()
+
 plt.show()
